@@ -66,7 +66,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.FunctionalTests
 
             var storeType = property.FindRelationalMapping().StoreType;
 
-            Assert.Equal("varchar(64) CHARACTER SET ucs2", storeType);
+            Assert.Equal("varchar(64)", storeType);
 
             return modelBuilder;
         }
@@ -79,7 +79,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.FunctionalTests
 
             var storeType = property.FindRelationalMapping().StoreType;
 
-            Assert.Equal("timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP", storeType);
+            Assert.Equal("timestamp(6)", storeType);
 
             return modelBuilder;
         }
